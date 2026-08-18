@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 # Jogos e comunicação
 sudo pacman --needed -S steam goverlay gamescope mangohud lib32-mangohud discord firefox
 
-./5.1-yay.sh
+./1.3-yay.sh
