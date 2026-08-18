@@ -63,4 +63,5 @@ inhibit_screensaver=1
 disable_splitlock=0
 EOF
 
+sudo reboot
 
