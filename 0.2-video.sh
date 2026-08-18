@@ -8,4 +8,4 @@ sudo pacman --noconfirm -U /home/milhomens/ssd-b/linux/tkg-ready/mesa/26.3.0/*.p
 # Instalando outros componentes de video
 sudo pacman --needed --noconfirm -S mesa-utils vulkan-tools libva-utils corectrl vulkan-headers
 
-./2-audio.sh
+sudo reboot
