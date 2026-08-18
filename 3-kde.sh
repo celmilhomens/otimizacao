@@ -11,3 +11,5 @@ sudo pacman --needed -S xdg-desktop-portal-gtk gtk3 gtk4
 
 # Imagem, miniaturas e mídia
 sudo pacman --needed -S ffmpegthumbs kdegraphics-thumbnailers onnxruntime gst-plugins-good gst-plugins-bad gst-libav
+
+./4-games.sh
