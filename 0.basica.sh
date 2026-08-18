@@ -36,3 +36,7 @@ ioprio=0
 inhibit_screensaver=1
 disable_splitlock=0
 EOF
+
+sudo mount -a
+sudo swapon -a
+sudo sysctl --system
