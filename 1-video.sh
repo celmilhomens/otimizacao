@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 # Instalando Mesa 26.3.0
 sudo pacman --noconfirm -U /home/milhomens/ssd-b/kernel-packages/mesa/26.3.0/*.pkg.tar.zst
