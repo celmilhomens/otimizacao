@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+### Configurando reflector
+#Instalando e aplicando
+sudo pacman -Syu
+sudo pacman --noconfirm -S reflector
+sudo reflector --country Brazil --protocol https --latest 30 --sort rate --save /etc/pacman.d/mirrorlist
+sudo pacman -Syy
+
 ### Montando SSDs
 # Criando pastas
 mkdir ssd-a
