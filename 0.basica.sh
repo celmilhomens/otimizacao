@@ -88,4 +88,4 @@ inhibit_screensaver=1
 disable_splitlock=0
 EOF
 
-./0-base.sh
+./0-devel.sh
