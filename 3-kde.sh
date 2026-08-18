@@ -10,6 +10,8 @@ sudo pacman --needed -S dolphin ark kate gwenview okular kitty kio-admin kdenetw
 sudo pacman --needed -S xdg-desktop-portal-gtk gtk3 gtk4
 
 # Imagem, miniaturas e mídia
-sudo pacman --needed -S ffmpegthumbs kdegraphics-thumbnailers onnxruntime gst-plugins-good gst-plugins-bad gst-libav
+sudo pacman --needed -S ffmpegthumbs kdegraphics-thumbnailers onnxruntime gst-plugins-good gst-plugins-bad gst-libav rtkit packagekit-qt6
+
+sudo systemctl enable plasmalogin.service
 
 ./4-games.sh
