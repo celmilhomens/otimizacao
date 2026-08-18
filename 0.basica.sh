@@ -9,6 +9,8 @@ sudo tee -a /etc/fstab >/dev/null <<'EOF'
 /dev/sdb1  /home/milhomens/ssd-b  ext4  defaults,noatime  0  2
 EOF
 
+sudo systemctl enable --now fstrim.timer
+
 sudo tee -a /etc/systemd/zram-generator.conf >/dev/null <<'EOF'
 [zram0]
 zram-size = 49152
