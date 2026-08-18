@@ -1,6 +1,30 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+### Configurando o pacman.conf
+PACMAN_CONF="/etc/pacman.conf"
+BACKUP="${PACMAN_CONF}.bak"
+
+# Cria o backup somente se ainda não existir
+if [[ ! -f "$BACKUP" ]]; then
+    sudo cp "$PACMAN_CONF" "$BACKUP"
+fi
+
+# Habilita ILoveCandy
+if ! grep -qE '^[[:space:]]*ILoveCandy[[:space:]]*$' "$PACMAN_CONF"; then
+    sudo sed -i '/^\[options\]/a ILoveCandy' "$PACMAN_CONF"
+fi
+
+# Define ParallelDownloads para 30
+if grep -qE '^[[:space:]#]*ParallelDownloads[[:space:]]*=' "$PACMAN_CONF"; then
+    sudo sed -i -E \
+        's/^[[:space:]#]*ParallelDownloads[[:space:]]*=.*/ParallelDownloads = 30/' \
+        "$PACMAN_CONF"
+else
+    sudo sed -i '/^\[options\]/a ParallelDownloads = 30' "$PACMAN_CONF"
+fi
+
+### Instalando pacotes essenciais ao script
 sudo pacman --needed --noconfirm -S reflector nano zram-generator gamemode lib32-gamemode base-devel linux-headers linux-firmware-amdgpu fastfetch htop
 
 ### Configurando reflector
