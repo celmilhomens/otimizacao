@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 # KDE Plasma, Wayland e integração
 sudo pacman --needed -S plasma-meta plasma5-integration breeze5 kwayland-integration qt6-wayland xorg-xwayland wayland-utils wl-clipboard
@@ -14,4 +15,4 @@ sudo pacman --needed -S ffmpegthumbs kdegraphics-thumbnailers onnxruntime gst-pl
 
 sudo systemctl enable plasmalogin.service
 
-./4-games.sh
+./1.2-games.sh
