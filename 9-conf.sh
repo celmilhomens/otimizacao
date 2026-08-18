@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+mkdir ssd-a
+mkdir ssd-b
+
 sudo tee -a /etc/fstab >/dev/null <<'EOF'
 /dev/nvme0n1p2  none  swap  defaults  0  0
 /dev/sda1  /home/milhomens/ssd-a  ext4  defaults,noatime  0  2
