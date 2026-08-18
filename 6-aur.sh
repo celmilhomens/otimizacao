@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sudo pacman -S onnxruntime
+sudo pacman -S onnxruntime thunderbird
 paru --needed --noconfirm -S lug-helper protonplus brave-bin chatgpt-desktop vulkan-low-latency-layer ttf-ms-fonts
 paru -S opentrack zapzap
