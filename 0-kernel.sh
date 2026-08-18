@@ -28,3 +28,5 @@ EOF
 
 # Aplicando Grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+sudo reboot
