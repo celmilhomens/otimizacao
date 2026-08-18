@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
-sudo pacman -S --needed git base-devel
+cd /home/milhomens
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
-./5.2-paru.sh
+./1.4-paru.sh
