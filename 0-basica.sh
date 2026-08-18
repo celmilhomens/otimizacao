@@ -4,7 +4,7 @@ set -euo pipefail
 ### Configurando reflector
 #Instalando e aplicando
 sudo pacman -Syu
-sudo pacman --noconfirm -S reflector
+sudo pacman --noconfirm -S reflector nano
 sudo reflector --country Brazil --protocol https --latest 30 --sort rate --save /etc/pacman.d/mirrorlist
 sudo pacman -Syy
 
