@@ -1,5 +1,11 @@
-### Alterando Grub
-# Configurando o default grub
+#!/usr/bin/env bash
+set -euo pipefail
+
+### Instalando Kernel customizado
+# Instalando Kernel compliado
+sudo pacman --noconfirm -U /home/milhomens/ssd-b/linux/tkg-ready/kernel/7.2.0/*.pkg.tar.zst
+
+# Alterando default do Grub
 sudo sed -i \
   '/^GRUB_CMDLINE_LINUX_DEFAULT=/d;
    /^GRUB_CMDLINE_LINUX=/d;
@@ -20,8 +26,5 @@ GRUB_TIMEOUT_STYLE=menu
 GRUB_DISABLE_SUBMENU=y
 EOF
 
-# Instalando Kernel 7.2
-sudo pacman --noconfirm -U /home/milhomens/ssd-b/kernel-packages/7.2/*.pkg.tar.zst
-
-# Subindo grub com mkconfig
+# Aplicando Grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
