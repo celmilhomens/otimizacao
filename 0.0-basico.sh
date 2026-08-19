@@ -25,7 +25,7 @@ else
 fi
 
 ### Instalando pacotes essenciais ao script
-sudo pacman --needed --noconfirm -S reflector nano zram-generator gamemode lib32-gamemode base-devel linux-headers linux-firmware-amdgpu fastfetch htop
+sudo pacman --needed --noconfirm -S linux-headers reflector nano zram-generator gamemode lib32-gamemode base-devel linux-headers linux-firmware-amdgpu fastfetch htop
 
 ### Configurando reflector
 sudo reflector --country Brazil --protocol https --latest 30 --sort rate --save /etc/pacman.d/mirrorlist
