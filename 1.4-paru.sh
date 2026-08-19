@@ -8,4 +8,4 @@ makepkg -si
 cd /home/milhomens
 sudo rm -r paru
 
-./2.1-aur
+./2.1-aur.sh
