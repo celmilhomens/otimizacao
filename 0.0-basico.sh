@@ -40,8 +40,8 @@ mkdir ssd-b
 # Alterando fstab
 sudo tee -a /etc/fstab >/dev/null <<'EOF'
 /dev/nvme0n1p2  none  swap  defaults  0  0
-/dev/sda1  /home/milhomens/ssd-a  ext4  defaults,noatime  0  2
-/dev/sdb1  /home/milhomens/ssd-b  ext4  defaults,noatime  0  2
+/dev/sda1  /home/milhomens/ssd-a  xfs  defaults,noatime,nofail,x-systemd.device-timeout=10s  0  0
+/dev/sdb1  /home/milhomens/ssd-b  ext4  defaults,noatime,nofail,x-systemd.device-timeout=10s  0  2
 EOF
 
 # Aplicando fstab
