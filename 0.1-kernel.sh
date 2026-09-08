@@ -3,7 +3,7 @@ set -euo pipefail
 
 ### Instalando Kernel customizado
 # Instalando Kernel compliado
-sudo pacman --noconfirm -U /home/milhomens/ssd-b/linux/tkg-ready/kernel/7.2.0/*.pkg.tar.zst
+sudo pacman --noconfirm -U /home/milhomens/ssd-b/linux/tkg-ready/kernel/7.2.x/*.pkg.tar.zst
 
 # Alterando default do Grub
 sudo sed -i \
