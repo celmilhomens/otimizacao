@@ -14,5 +14,6 @@ sudo pacman --needed -S xdg-desktop-portal-gtk gtk3 gtk4
 sudo pacman --needed -S ffmpegthumbs kdegraphics-thumbnailers onnxruntime gst-plugins-good gst-plugins-bad gst-libav rtkit packagekit-qt6
 
 sudo systemctl enable plasmalogin.service
+cd /home/milhomens/otimizacao
 
 ./1.2-games.sh
